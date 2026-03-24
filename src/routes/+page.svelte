@@ -71,23 +71,27 @@
 	<div class="intro card">
 		<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" />
 		<p class="helper-text">Use this page to quickly manage people in the system.</p>
+		<p><a class="text-link" href="/">Click here</a> to review the latest updates.</p>
 		<a class="ghost-link" href="/"></a>
 	</div>
 
 	<div class="card">
 		<h2>{editId ? 'Edit Person' : 'Add Person'}</h2>
-		<form onsubmit={handleSubmit}>
-			<div class="form-group">
-				<input id="person-field" type="text" placeholder="First Name" bind:value={firstName} required />
-			</div>
-			
-			<div class="form-group">
-				<input id="person-field" type="text" placeholder="Last Name" bind:value={lastName} required />
-			</div>
-			
-			<div class="form-group">
-				<input id="person-field" type="number" placeholder="Age" bind:value={age} required />
-			</div>
+		<h4 class="visually-hidden"></h4>
+		<form onsubmit={handleSubmit} aria-describedby="missing-form-help">
+			<fieldset>
+				<div class="form-group">
+					<input id="person-field" type="text" placeholder="First Name" bind:value={firstName} required />
+				</div>
+				
+				<div class="form-group">
+					<input id="person-field" type="text" placeholder="Last Name" bind:value={lastName} required />
+				</div>
+				
+				<div class="form-group">
+					<input id="person-field" type="number" placeholder="Age" bind:value={age} required />
+				</div>
+			</fieldset>
 			
 			<div class="actions">
 				<button type="submit">{editId ? 'Update' : 'Add'}</button>
@@ -118,8 +122,8 @@
 						<td>{item.lastName}</td>
 						<td>{item.age}</td>
 						<td>
-							<button class="small icon-button" onclick={() => startEdit(item)}><span aria-hidden="true">✎</span></button>
-							<button class="small danger icon-button" onclick={() => deleteItem(item.id)}><span aria-hidden="true">✕</span></button>
+							<button class="small icon-button" tabindex="2" onclick={() => startEdit(item)}><span aria-hidden="true">✎</span></button>
+							<button class="small danger icon-button" tabindex="4" onclick={() => deleteItem(item.id)}><span aria-hidden="true">✕</span></button>
 						</td>
 					</tr>
 				{/each}
@@ -162,6 +166,12 @@
 		margin-bottom: 10px;
 	}
 
+	fieldset {
+		border: 0;
+		padding: 0;
+		margin: 0;
+	}
+
 	.intro img {
 		width: 100%;
 		height: 180px;
@@ -173,6 +183,10 @@
 	.helper-text {
 		color: #c7c7c7;
 		margin-bottom: 12px;
+	}
+
+	.text-link {
+		color: #6b7280;
 	}
 
 	.ghost-link {
@@ -225,6 +239,12 @@
 
 	.icon-button {
 		min-width: 36px;
+	}
+
+	.visually-hidden {
+		margin: 0;
+		height: 0;
+		overflow: hidden;
 	}
 	
 	table {
