@@ -74,15 +74,14 @@
 	<div class="intro card">
 		<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Students working together on laptops in a study environment" />
 		<p class="helper-text">Use this page to quickly manage people in the system.</p>
-		<p><a class="text-link" href="/">Click here</a> to review the latest updates.</p>
+		
 		
 	</div>
 
 	<div class="card">
-		<h2>{editId ? 'Edit Person' : 'Add Person'}</h2>
-		<p id="missing-form-help" class="helper-text">Complete all fields before submitting the form.</p>
-		<form onsubmit={handleSubmit} aria-describedby="missing-form-help">
+		<form onsubmit={handleSubmit}>
 			<fieldset>
+				<legend class="fieldset-legend">Person details</legend>
 				<div class="form-group">
 					<label for="first-name">First Name</label>
 					<input id="first-name" type="text" placeholder="First Name" bind:value={firstName} required />
@@ -174,6 +173,16 @@
 		border: 0;
 		padding: 0;
 		margin: 0;
+	}
+
+	.fieldset-legend {
+		margin-top: 20px;
+		margin-bottom: 12px;
+		font-weight: 600;
+		font-size: 1rem;
+		color: #0056b3;
+		border-left: 4px solid #0056b3;
+		padding-left: 8px;
 	}
 
 	.intro img {
