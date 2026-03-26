@@ -217,8 +217,8 @@
 	
 	button {
 		padding: 8px 16px;
-		background-color: #8ec5ff;
-		color: #dbeeff;
+		background-color: #0056b3;
+		color: #ffffff;
 		border: none;
 		border-radius: 4px;
 		cursor: pointer;
