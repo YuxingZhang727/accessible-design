@@ -67,7 +67,7 @@
 	}
 </script>
 
-<main class="container" role = "main">
+<main class="container">
 	<header>
 		<h1>CRUD (Accessibility Issues)</h1>
 		<h2>Student Records</h2>
@@ -114,11 +114,11 @@
 		<table>
 			<thead>
 				<tr>
-				  <td>ID</td>
-					<td>First Name</td>
-					<td>Last Name</td>
-					<td>Age</td>
-					<td>Actions</td>
+					<th scope="col">ID</th>
+					<th scope="col">First Name</th>
+					<th scope="col">Last Name</th>
+					<th scope="col">Age</th>
+					<th scope="col">Actions</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -129,8 +129,8 @@
 						<td>{item.lastName}</td>
 						<td>{item.age}</td>
 						<td>
-							<button class="small icon-button" tabindex="2" onclick={() => startEdit(item)}><span aria-hidden="true">✎</span></button>
-							<button class="small danger icon-button" tabindex="4" onclick={() => deleteItem(item.id)}><span aria-hidden="true">✕</span></button>
+							<button class="small icon-button" onclick={() => startEdit(item)}><span aria-hidden="true">✎</span></button>
+							<button class="small danger icon-button" onclick={() => deleteItem(item.id)}><span aria-hidden="true">✕</span></button>
 						</td>
 					</tr>
 				{/each}
@@ -267,14 +267,14 @@
 		border-collapse: collapse;
 	}
 	
-	thead td,
+	thead th,
 	tbody td {
 		padding: 10px;
 		border-bottom: 1px solid #ddd;
 		text-align: left;
 	}
 	
-	thead td {
+	thead th {
 		background-color: #f8f9fa;
 	}
 </style>
