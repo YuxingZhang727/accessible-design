@@ -1,3 +1,6 @@
+<svelte:head>
+	<title>Student Records Manager</title>
+</svelte:head>
 <script>
 	let items = $state([
 		{ id: 1, firstName: 'John', lastName: 'Doe', age: 30 },
