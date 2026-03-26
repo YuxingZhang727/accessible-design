@@ -75,12 +75,12 @@
 		<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Students working together on laptops in a study environment" />
 		<p class="helper-text">Use this page to quickly manage people in the system.</p>
 		<p><a class="text-link" href="/">Click here</a> to review the latest updates.</p>
-		<a class="ghost-link" href="/"></a>
+		
 	</div>
 
 	<div class="card">
 		<h2>{editId ? 'Edit Person' : 'Add Person'}</h2>
-		<h4 class="visually-hidden"></h4>
+		
 		<form onsubmit={handleSubmit} aria-describedby="missing-form-help">
 			<fieldset>
 				<div class="form-group">
