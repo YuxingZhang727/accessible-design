@@ -80,7 +80,7 @@
 
 	<div class="card">
 		<h2>{editId ? 'Edit Person' : 'Add Person'}</h2>
-		
+		<p id="missing-form-help" class="helper-text">Complete all fields before submitting the form.</p>
 		<form onsubmit={handleSubmit} aria-describedby="missing-form-help">
 			<fieldset>
 				<div class="form-group">
