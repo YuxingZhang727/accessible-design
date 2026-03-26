@@ -84,15 +84,18 @@
 		<form onsubmit={handleSubmit} aria-describedby="missing-form-help">
 			<fieldset>
 				<div class="form-group">
-					<input id="person-field" type="text" placeholder="First Name" bind:value={firstName} required />
+					<label for="first-name">First Name</label>
+					<input id="first-name" type="text" placeholder="First Name" bind:value={firstName} required />
 				</div>
 				
 				<div class="form-group">
-					<input id="person-field" type="text" placeholder="Last Name" bind:value={lastName} required />
+					<label for="last-name">Last Name</label>
+					<input id="last-name" type="text" placeholder="Last Name" bind:value={lastName} required />
 				</div>
 				
 				<div class="form-group">
-					<input id="person-field" type="number" placeholder="Age" bind:value={age} required />
+					<label for="age">Age</label>
+					<input id="age" type="number" placeholder="Age" bind:value={age} required />
 				</div>
 			</fieldset>
 			
@@ -156,13 +159,11 @@
 		font-size: 1rem;
 		font-weight: normal;
 	}
-	
-	.card {
-		border: 1px solid #ddd;
-		padding: 20px;
-		border-radius: 8px;
-		margin-bottom: 20px;
-		background: white;
+
+	label {
+		display: block;
+		margin-bottom: 6px;
+		font-weight: 600;
 	}
 	
 	.form-group {
