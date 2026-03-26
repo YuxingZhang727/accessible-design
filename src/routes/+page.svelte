@@ -69,10 +69,10 @@
 
 <div class="container">
 	<h1>CRUD (Accessibility Issues)</h1>
-	<h3>Student Records</h3>
+	<h2>Student Records</h2>
 
 	<div class="intro card">
-		<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" />
+		<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Students working together on laptops in a study environment" />
 		<p class="helper-text">Use this page to quickly manage people in the system.</p>
 		<p><a class="text-link" href="/">Click here</a> to review the latest updates.</p>
 		<a class="ghost-link" href="/"></a>
@@ -184,7 +184,7 @@
 	}
 
 	.helper-text {
-		color: #c7c7c7;
+		color: #4b5163;
 		margin-bottom: 12px;
 	}
 
