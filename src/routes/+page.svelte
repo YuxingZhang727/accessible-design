@@ -67,9 +67,11 @@
 	}
 </script>
 
-<div class="container">
-	<h1>CRUD (Accessibility Issues)</h1>
-	<h2>Student Records</h2>
+<main class="container" role = "main">
+	<header>
+		<h1>CRUD (Accessibility Issues)</h1>
+		<h2>Student Records</h2>
+	</header>
 
 	<div class="intro card">
 		<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Students working together on laptops in a study environment" />
@@ -140,7 +142,7 @@
 			</tbody>
 		</table>
 	</div>
-</div>
+</main>
 
 <style>
 	.container {
